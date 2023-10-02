@@ -1,4 +1,4 @@
-//import jogador from '/dist/assets/vetor-jogador-bola-na-rede01-min-f254f6bb.png'
+import jogador from '/src/assets/vetor-jogador-bola-na-rede01-min.png'
 
 function Inscricao() {
 
@@ -21,7 +21,7 @@ function Inscricao() {
                     <p>* Alguma dúvida? Verifique nossas <a>perguntas frequentes</a></p>
                 </div>
                 <div className="inscricao__c-imagens">
-                    <img className="inscricao__imagens-one" src="src/assets/vetor-jogador-bola-na-rede01-min.png" alt="" />
+                    <img className="inscricao__imagens-one" src={jogador} alt="" />
                 
                 </div>
             </div>
