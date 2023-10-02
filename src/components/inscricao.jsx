@@ -19,7 +19,7 @@ function Inscricao() {
                     <p>* Alguma dúvida? Verifique nossas <a>perguntas frequentes</a></p>
                 </div>
                 <div className="inscricao__c-imagens">
-                    <img className="inscricao__imagens-one" src="/assets/vetor-jogador-bola-na-rede01-min.png" alt="" />
+                    <img className="inscricao__imagens-one" src="src/resources/vetor-jogador-bola-na-rede01-min.png" alt="" />
                 
                 </div>
             </div>
