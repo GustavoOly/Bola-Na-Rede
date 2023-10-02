@@ -7,6 +7,7 @@ function BtnInstagram(){
     right: '11px',
     bottom: '80px',
     cursor: 'pointer',
+   };
   
 	return (
 
