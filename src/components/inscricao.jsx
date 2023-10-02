@@ -1,4 +1,4 @@
-import jogador from '/home/gusttavo/trabalhos/bola-na-rede/client/src/assets/vetor-jogador-bola-na-rede01-min.png'
+import jogador from '/home/gusttavo/trabalhos/bola-na-rede/client/dist/assets/vetor-jogador-bola-na-rede01-min-f254f6bb.png'
 
 function Inscricao() {
 
