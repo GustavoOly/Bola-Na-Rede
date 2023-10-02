@@ -1,4 +1,4 @@
-import bolaNaRedeLogo from '/home/gusttavo/trabalhos/bola-na-rede/client/src/assets/Bola-Na-Rede - logo.svg'
+//import bolaNaRedeLogo from '/home/gusttavo/trabalhos/bola-na-rede/client/src/assets/Bola-Na-Rede - logo.svg'
 
 function Header() {
    
@@ -10,7 +10,7 @@ function Header() {
       <section style={estiloSection}>
          <div className="header__container">
             <div className="header__c-logo">
-               <img title="Logo Bola Na Rede" className="header__logo-img" src={bolaNaRedeLogo} />
+               <img title="Logo Bola Na Rede" className="header__logo-img" src="src/assets/Bola-Na-Rede - logo.svg" />
             </div>
             {/*<nav className="header__nav">
 
