@@ -1,0 +1,111 @@
+.inscricao__section {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.inscricao__container {
+    background-color: black;
+    max-width: 1280px;
+    height: 32rem;
+    margin: 0 auto;
+    position: relative;
+    animation: identifier 2s;
+
+    @keyframes identifier {
+        from {
+            opacity: 0;
+            transform: translateY(20%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .inscricao__c-card {
+        max-width: 750px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        position: relative;
+        z-index: 200;
+
+        .inscricao__c-title {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .inscricao__c-email {
+            background: #2b2a33;
+            width: 100%;
+            padding: 10px;
+            border-radius: 50px;
+            height: 4rem;
+            position: relative;
+            overflow: hidden;
+            max-width: 500px;
+        }
+
+        form {
+            height: 100%;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            width: 77%;
+            height: 44px;
+            border-radius: 20px;
+            transform: translate(0%, 0%);
+            text-indent: 10px;
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 50px;
+            background-color: #f31d46;
+            cursor: pointer;
+            position: absolute;
+            border: none;
+            transform: translate(9%, -6%);
+            height: 50px;
+            box-shadow: 0 0 6px 2px #1c1c1c47;
+
+            &:hover {
+                background-color: #ee0e37;
+            }
+        }
+
+    }
+
+    .inscricao__imagens-one {
+        position: absolute;
+        top: 0;
+        right: 76%;
+        display: block;
+        max-height: 100%;
+        max-width: 100%;
+        animation: imagens-one infinite 5s;
+    }
+
+    @keyframes imagens-one {
+        0% {
+            transform: translateY(0%);
+        }
+
+        50% {
+            transform: translateY(5%);
+        }
+
+        0% {
+            transform: translateY(0%);
+        }
+
+    }
+}

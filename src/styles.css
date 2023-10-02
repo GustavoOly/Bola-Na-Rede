@@ -1,0 +1,180 @@
+@charset "UTF-8";
+*,
+after,
+before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  width: 100%;
+  height: 100%; }
+
+#root {
+  width: 100%;
+  height: 100%; }
+
+li {
+  list-style: none; }
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+  cursor: pointer;
+  color: var(--color-primary);
+  cursor: pointer; }
+  a:hover {
+    text-decoration: underline; }
+
+/*a:hover {
+    color: #535bf2;
+}*/
+section {
+  width: 100%; }
+
+h1 {
+  font-size: 4em;
+  line-height: 1.1; }
+
+h4::before {
+  content: '―';
+  margin-right: 10px; }
+
+img {
+  user-select: none;
+  -moz-user-select: none !important;
+  /* Para navegadores Firefox */
+  -webkit-user-select: none;
+  -ms-user-select: none; }
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: black;
+  --color-primary: #f31d46;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%; }
+
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 5rem; }
+  .header__container .header__c-logo {
+    will-change: filter;
+    transition: filter 300ms; }
+    .header__container .header__c-logo .header__logo-img {
+      width: 60px;
+      cursor: pointer !important; }
+      .header__container .header__c-logo .header__logo-img:hover {
+        filter: drop-shadow(0 0 2em #f31d46); }
+  .header__container .header__nav {
+    display: flex;
+    gap: 20px; }
+
+.inscricao__section {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+.inscricao__container {
+  background-color: black;
+  max-width: 1280px;
+  height: 32rem;
+  margin: 0 auto;
+  position: relative;
+  animation: identifier 2s; }
+@keyframes identifier {
+  from {
+    opacity: 0;
+    transform: translateY(20%); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+  .inscricao__container .inscricao__c-card {
+    max-width: 750px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    position: relative;
+    z-index: 200; }
+    .inscricao__container .inscricao__c-card .inscricao__c-title {
+      display: flex;
+      flex-direction: column;
+      gap: 10px; }
+    .inscricao__container .inscricao__c-card .inscricao__c-email {
+      background: #2b2a33;
+      width: 100%;
+      padding: 10px;
+      border-radius: 50px;
+      height: 4rem;
+      position: relative;
+      overflow: hidden;
+      max-width: 500px; }
+    .inscricao__container .inscricao__c-card form {
+      height: 100%; }
+    .inscricao__container .inscricao__c-card input {
+      border: none;
+      outline: none;
+      width: 77%;
+      height: 44px;
+      border-radius: 20px;
+      transform: translate(0%, 0%);
+      text-indent: 10px; }
+    .inscricao__container .inscricao__c-card button {
+      padding: 10px;
+      border-radius: 50px;
+      background-color: #f31d46;
+      cursor: pointer;
+      position: absolute;
+      border: none;
+      transform: translate(9%, -6%);
+      height: 50px;
+      box-shadow: 0 0 6px 2px #1c1c1c47; }
+      .inscricao__container .inscricao__c-card button:hover {
+        background-color: #ee0e37; }
+  .inscricao__container .inscricao__imagens-one {
+    position: absolute;
+    top: 0;
+    right: 76%;
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+    animation: imagens-one infinite 5s; }
+@keyframes imagens-one {
+  0% {
+    transform: translateY(0%); }
+  50% {
+    transform: translateY(5%); }
+  0% {
+    transform: translateY(0%); } }
+.b-whatsapp {
+  background-color: #25D366;
+  padding: 10px;
+  border-radius: 50%;
+  position: fixed;
+  right: 15px;
+  z-index: 2;
+  bottom: 25px;
+  cursor: pointer; }
+
+.continer-whatsapp {
+  display: none; }
+
+.whatsapp-button:hover .continer-whatsapp {
+  display: block !important; }
+
+/*# sourceMappingURL=styles.css.map */
