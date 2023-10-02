@@ -42,7 +42,8 @@
         }
 
         .inscricao__c-email {
-            background: #2b2a33;
+            background: white;
+            //2b2a33
             width: 100%;
             padding: 10px;
             border-radius: 50px;
@@ -92,8 +93,10 @@
             border-radius: 20px;
             transform: translate(0%, 0%);
             text-indent: 10px;
+            background-color: white;
+            color: black;
         }
-        
+
         button {
             padding: 10px;
             border-radius: 50px;
@@ -103,7 +106,6 @@
             border: none;
             transform: translate(9%, -6%);
             height: 50px;
-            box-shadow: 0 0 6px 2px #1c1c1c47;
             color: white;
 
             &:hover {
