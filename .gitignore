@@ -11,8 +11,6 @@ styles.css.map
 .sass-cache
 
 node_modules
-dist
-dist-ssr
 *.local
 
 # Editor directories and files
