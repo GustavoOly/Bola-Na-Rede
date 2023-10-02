@@ -7,7 +7,7 @@ function Header() {
       <section style={estiloSection}>
          <div className="header__container">
             <div className="header__c-logo">
-               <img title="Logo Bola Na Rede" className="header__logo-img" src="public/Bola-Na-Rede - logo.svg" />
+               <img title="Logo Bola Na Rede" className="header__logo-img" src="public/images/Bola-Na-Rede - logo.svg" />
             </div>
             {/*<nav className="header__nav">
 
