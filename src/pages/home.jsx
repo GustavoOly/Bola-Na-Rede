@@ -1,7 +1,8 @@
 import Header from '../components/header.jsx'
 import Inscricao from '../components/inscricao.jsx'
-import BtnWhatsapp from '../components/b-whatsapp.jsx';
+import BtnWhatsapp from '../components/b-whatsapp.jsx'
 import BtnInstagram from '../components/b-instagram.jsx'
+import Footer from '../components/footer.jsx'
 
 
 function Home() {
@@ -11,6 +12,7 @@ function Home() {
       <Inscricao />
       <BtnWhatsapp />
       <BtnInstagram />
+      <Footer />
       {/* Resto do conteúdo da página inicial */}
     </>
   );

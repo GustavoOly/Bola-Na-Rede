@@ -4,7 +4,7 @@ function BtnInstagram(){
 
     const stylesInstagram = {
     position: 'fixed',
-    right: '11px',
+    right: '10px',
     bottom: '80px',
     cursor: 'pointer',
    };
