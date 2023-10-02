@@ -1,12 +1,22 @@
 import btnWhatsapp from '/src/assets/whatsapp.svg'
 function BtnWhatsapp(){
 
+    const stylewhatsapp = {
+        backgroundColor: '#25D366',
+        padding: '10px',
+        borderRadius: '50%',
+        position: 'fixed',
+        right: '15px',
+        zIndex: '2',
+        bottom: '25px',
+        cursor: 'pointer',
+    }
+
     return (
-        <>
-        <div className="whatsapp-button">
-    <img className="b-whatsapp" src={btnWhatsapp} title="Entrar no grupo do whatsapp" alt="botão do whatsapp" />
-    <div className="continer-whatsapp">Cnncjcijndicndno</div> 
-    </div>
+    <>
+    <a href="https://chat.whatsapp.com/E19JWotFtQv9PhxpoBDlM0" target="_blank" rel="noopener">
+         <img style={stylewhatsapp} className="b-whatsapp" src={btnWhatsapp} title="Entrar no grupo do whatsapp" alt="botão do whatsapp" />
+    </a>
     </>
     )
 }
