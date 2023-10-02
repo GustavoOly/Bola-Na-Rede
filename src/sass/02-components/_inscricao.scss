@@ -2,7 +2,11 @@
     background-color: black;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+}
+@media (max-width: 768px) {
+    .inscricao__section{
+    height: 55rem;
+}
 }
 
 .inscricao__container {
