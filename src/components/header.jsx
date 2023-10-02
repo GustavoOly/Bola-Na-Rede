@@ -1,4 +1,7 @@
+import bolaNaRedeLogo from '/home/gusttavo/trabalhos/bola-na-rede/client/src/assets/Bola-Na-Rede - logo.svg'
+
 function Header() {
+   
    const estiloSection = {
       borderBottom: '1px solid rgba(255, 255, 255, 0.13)',
       backgroundColor: 'black',
@@ -7,7 +10,7 @@ function Header() {
       <section style={estiloSection}>
          <div className="header__container">
             <div className="header__c-logo">
-               <img title="Logo Bola Na Rede" className="header__logo-img" src="./src/assets/Bola-Na-Rede - logo.svg" />
+               <img title="Logo Bola Na Rede" className="header__logo-img" src={bolaNaRedeLogo} />
             </div>
             {/*<nav className="header__nav">
 
