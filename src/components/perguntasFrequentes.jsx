@@ -40,7 +40,7 @@ function PerguntasFrequentes() {
         gap: '20px',
         alignItems: 'center',
         padding: '3.5rem 10px',
-        borderRadius: '20px 20px 0px 0px',
+        borderRadius: '30px 30px 0px 0px',
         position: 'relative',
         zIdenx: '100',
         backgroundColor: 'var(--background-secundary)' 
