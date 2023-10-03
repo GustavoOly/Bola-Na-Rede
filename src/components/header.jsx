@@ -4,7 +4,9 @@ function Header() {
    
    const estiloSection = {
       borderBottom: '1px solid rgba(255, 255, 255, 0.13)',
-      backgroundColor: 'black',
+      backgroundColor: 'var(--background-primary)'
+      
+      
    };
    return (
       <section style={estiloSection}>

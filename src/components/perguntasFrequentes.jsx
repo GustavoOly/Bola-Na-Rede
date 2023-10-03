@@ -40,15 +40,18 @@ function PerguntasFrequentes() {
         gap: '20px',
         alignItems: 'center',
         padding: '3.5rem 10px',
-        backgroundColor: 'rgb(222, 222, 222)',
-        color: 'black',
         borderRadius: '20px 20px 0px 0px',
         position: 'relative',
-        zIdenx: '100'
+        zIdenx: '100',
+        backgroundColor: 'var(--background-secundary)' 
+    
+    }
+    const faqSectionStyles = {
+        backgroundColor: 'var(--background-primary)'   
     }
 
     return (
-        <section>
+        <section style={faqSectionStyles}>
             <div style={faqContainerStyles} className="faq__container">
                 <h1>FAQs</h1>
                 <article>

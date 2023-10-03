@@ -1,7 +1,8 @@
 .inscricao__section {
-    background-color: black;
+    background-color: var(--background-primary);
     width: 100%;
-    height: f;
+    //height: f;
+    //border-bottom: 1px solid rgba(255, 255, 255, 0.13);
 }
 @media (max-width: 768px) {
     .inscricao__section{
@@ -10,7 +11,7 @@
 }
 
 .inscricao__container {
-    background-color: black;
+    //background-color: black;
     max-width: 1280px;
     height: 33rem;
     margin: 0 auto;
@@ -121,7 +122,7 @@
 
     .inscricao__imagens-one {
         position: absolute;
-        top: 0;
+        top: -10px;
         right: 76%;
         display: block;
         max-height: 100%;
