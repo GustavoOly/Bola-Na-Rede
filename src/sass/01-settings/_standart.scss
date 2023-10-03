@@ -56,6 +56,12 @@ img {
     -webkit-user-select: none;
     -ms-user-select: none; 
 }
+summary {
+    font-size: clamp(1.4em, 2.5em, 3vw);
+}
+summary[open] {
+    font-size: clamp(1.8em, 2.5em, 3vw);
+}
 
 details {
     cursor:pointer;
@@ -66,5 +72,4 @@ details {
 }
 details > summary {
     //list-style-type: "";
-    transition: all 1s;
 }

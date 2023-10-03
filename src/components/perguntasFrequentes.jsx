@@ -15,19 +15,17 @@ const source = [
 ]
 
 function PerguntasFrequentes() {
-    const faqStyles = {
-        fontSize: 'clamp(2em, 3em, 3.3em)',
-    }
+
     const faqContainerStyles = {
         width: 'auto',
         display: 'flex',
         flexDirection: 'column',
         gap: '20px',
         alignItems: 'center',
-        padding: '5rem 0px',
+        padding: '4.2rem 10px',
         backgroundColor: 'rgb(222, 222, 222)',
         color: 'black',
-        borderRadius: '50px 50px 0px 0px',
+        borderRadius: '10px 10px 0px 0px',
         position: 'relative',
         zIdenx: '100'
     }
@@ -39,7 +37,7 @@ function PerguntasFrequentes() {
                 <article>
                     {source.map((item) => (
                         <details key={item.summary}>
-                            <summary style={faqStyles}>
+                            <summary>
                                 {item.summary}
                             </summary>
                             {item.details}
