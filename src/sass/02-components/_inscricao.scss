@@ -14,32 +14,33 @@
     margin: 0 auto;
     position: relative;
     display: flex;
-    animation: identifier 2s;
 
-    @keyframes identifier {
-        from {
-            opacity: 0;
-            transform: translateY(20%);
-        }
 
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
     @media (max-width: 768px) {
         flex-direction: column;
     }
 
     .inscricao__c-card {
         max-width: 750px;
-        margin: 0 auto;
         display: flex;
         flex-direction: column;
         gap: 15px;
         padding: 20px;
         position: relative;
         z-index: 200;
+        animation: identifier 2s;
+
+        @keyframes identifier {
+            from {
+                opacity: 0;
+                transform: translateY(20%);
+            }
+    
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
         .inscricao__c-title {
             display: flex;
@@ -53,7 +54,7 @@
             width: 100%;
             padding: 10px;
             border-radius: 50px;
-            
+
             position: relative;
             max-width: 500px;
         }
@@ -62,7 +63,7 @@
             .inscricao__c-email {
                 padding: 0;
                 background: none;
-               
+
                 max-width: 100%;
             }
 
@@ -128,30 +129,59 @@
         display: block;
         //max-height: 100%;
         max-width: 100%;
-        animation: imagens-one infinite 5s;
+        animation: imagens-one infinite 5s, initImg 2s;
     }
 
     @keyframes imagens-one {
-        20% {
-            transform: translateY(0%);
+        0% {
+            transform: translateX(0%);
         }
 
         50% {
-            transform: translateY(5%);
+            transform: translateX(5%);
         }
 
-        20% {
-            transform: translateY(0%);
+        0% {
+            transform: translateX(0%);
         }
 
     }
 
-    @media (max-width:768px) {
-        .inscricao__imagens-one {
-            top: auto;
-            right: 0%;
-            left: 0%;
-            margin: 0 auto;
+    @keyframes initImg {
+        from {
+            opacity: 0;
+            transform: translateX(20%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(5%);
         }
     }
+
+        @media (max-width:768px) {
+            .inscricao__imagens-one {
+                top: auto;
+                right: 0%;
+                left: 0%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .faq__container {
+        animation: identifier 2s;
+
+        @keyframes identifier {
+            from {
+            opacity: 0;
+            transform: translateY(20%);
+        }
+    
+            to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
 }

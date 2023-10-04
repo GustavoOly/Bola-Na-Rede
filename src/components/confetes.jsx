@@ -165,7 +165,7 @@ function Confetes() {
 
         function drawParticles(context) {
             var particle;
-            var x, y, x2, y2;
+            var x, x2, y2;
             for (var i = 0; i < particles.length; i++) {
                 particle = particles[i];
                 context.beginPath();

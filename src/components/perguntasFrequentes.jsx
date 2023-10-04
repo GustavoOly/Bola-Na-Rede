@@ -43,11 +43,11 @@ function PerguntasFrequentes() {
         borderRadius: '30px 30px 0px 0px',
         position: 'relative',
         zIdenx: '100',
-        backgroundColor: 'var(--background-secundary)' 
-    
+        backgroundColor: 'var(--background-secundary)',
     }
+
     const faqSectionStyles = {
-        backgroundColor: 'var(--background-primary)'   
+        backgroundColor: 'var(--background-primary)'
     }
 
     return (
@@ -56,7 +56,7 @@ function PerguntasFrequentes() {
                 <h1>FAQs</h1>
                 <article>
                     {source.map((item, index) => (
-                        <details key={item.summary} open={index===0}>
+                        <details key={item.summary} open={index === 0}>
                             <summary>
                                 {item.summary}
                             </summary>
