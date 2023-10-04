@@ -4,50 +4,58 @@ import React, { useState } from 'react';
 import Confetes from './confetes'; // Certifique-se de que Confetes esteja corretamente importado
 
 function Inscricao() {
-  const [emailEnviado, setEmailEnviado] = useState(false);
+    const [emailEnviado, setEmailEnviado] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+    const handleSubmit = async (e) => {
+        e.preventDefault();
 
-    // Lógica para enviar o email (pode ser uma chamada à API, por exemplo)
+        const form = e.target;
+        const formData = new FormData(form);
 
-    // Após o envio do email, defina emailEnviado como true
-    setEmailEnviado(true);
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+        });
+        setEmailEnviado(true);
+        Confetes();
+    };
 
-    // Execute a função de confetes
-    Confetes();
-  };
+    const styleP = {
+        color: 'black',
+        textAlign: 'center',
+        padding: '10px',
+    };
 
-  return (
-    <section className="inscricao__section">
-      <div className="inscricao__container">
-        <div className="inscricao__c-card">
-          <span className="inscricao__c-title">
-            <h4>Em breve</h4>
-            <h1>Seja notificado quando iniciarmos</h1>
-            <p>Nossas inscrições serão abertas em breve, enquanto isso deixe seu e-mail abaixo para te notificarmos quando estiverem abertas.</p>
-          </span>
+    return (
+        <section className="inscricao__section">
+            <div className="inscricao__container">
+                <div className="inscricao__c-card">
+                    <span className="inscricao__c-title">
+                        <h4>Em breve</h4>
+                        <h1>Seja notificado quando iniciarmos</h1>
+                        <p>Nossas inscrições serão abertas em breve, enquanto isso deixe seu e-mail abaixo para te notificarmos quando estiverem abertas.</p>
+                    </span>
 
-          <div className="inscricao__c-email">
-            {emailEnviado ? (
-              <p>Obrigado por enviar seu e-mail!</p>
-            ) : (
-              <form action="https://formsubmit.co/bolanarede.ipa@outlook.com.br" method="POST">
-                <input type="email" placeholder="Digite seu email" title="Digite seu email" name="email" id="inscricao__input-email" required />
-                <input type="hidden" name="_next" value="https://bolanarede-ipa.netlify.app/" />
-                <input type="hidden" name="_captcha" value="false" />
-                <button onSubmit={handleSubmit} type="submit" title="Enviar email">Notifique-me</button>
-              </form>
-            )}
-          </div>
-          <p>* Alguma dúvida? Verifique nossas <a>perguntas frequentes</a></p>
-        </div>
-        <div className="inscricao__c-imagens">
-          <img className="inscricao__imagens-one" src={jogador} alt="" />
-        </div>
-      </div>
-    </section>
-  );
+                    <div className="inscricao__c-email">
+                        {emailEnviado ? (
+                            <p style={styleP}>Obrigado por enviar seu e-mail!</p>
+                        ) : (
+                            <form action="https://formsubmit.co/bolanarede.ipa@outlook.com.br" method="POST" onSubmit={handleSubmit} >
+                                <input type="email" placeholder="Digite seu email" title="Digite seu email" name="email" id="inscricao__input-email" required />
+                                <input type="hidden" name="_next" value="https://bolanarede-ipa.netlify.app/" />
+                                <input type="hidden" name="_captcha" value="false" />
+                                <button type="submit" title="Enviar email">Notifique-me</button>
+                            </form>
+                        )}
+                    </div>
+                    <p>* Alguma dúvida? Verifique nossas <a>perguntas frequentes</a></p>
+                </div>
+                <div className="inscricao__c-imagens">
+                    <img className="inscricao__imagens-one" src={jogador} alt="" />
+                </div>
+            </div>
+        </section>
+    );
 }
 
 export default Inscricao;
