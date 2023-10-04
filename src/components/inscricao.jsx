@@ -42,7 +42,7 @@ function Inscricao() {
                         ) : (
                             <form action="https://formsubmit.co/bolanarede.ipa@outlook.com.br" method="POST" onSubmit={handleSubmit} >
                                 <input type="email" placeholder="Digite seu email" title="Digite seu email" name="email" id="inscricao__input-email" required />
-                                <input type="hidden" name="_next" value="https://bolanarede-ipa.netlify.app/" />
+                                <input type="hidden" name="_next" value="https://bolanarede-ipa.netlify.app" />
                                 <input type="hidden" name="_captcha" value="false" />
                                 <button type="submit" title="Enviar email">Notifique-me</button>
                             </form>
