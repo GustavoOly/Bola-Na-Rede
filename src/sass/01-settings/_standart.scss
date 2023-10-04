@@ -5,9 +5,10 @@ before {
     margin: 0;
     box-sizing: border-box;
 
-    }
+}
 
-body, html {
+body,
+html {
     width: 100%;
     height: 100%;
     scroll-behavior: smooth;
@@ -17,6 +18,7 @@ body, html {
     width: 100%;
     height: 100%;
 }
+
 li {
     list-style: none;
 }
@@ -28,20 +30,18 @@ a {
     cursor: pointer;
     color: var(--color-primary);
     cursor: pointer;
+
     &:hover {
-        text-decoration:underline;
+        text-decoration: underline;
     }
 }
-/*a:hover {
-    color: #535bf2;
-}*/
 
 section {
     width: 100%;
 }
 
 h1 {
-    font-size: clamp(2.3em, 4em , 5vw);
+    font-size: clamp(2.3em, 4em, 5vw);
     line-height: 1.1;
 }
 
@@ -52,23 +52,28 @@ h4::before {
 
 img {
     user-select: none;
-    -moz-user-select: none !important; /* Para navegadores Firefox */
+    -moz-user-select: none !important;
+    /* Para navegadores Firefox */
     -webkit-user-select: none;
-    -ms-user-select: none; 
+    -ms-user-select: none;
 }
+
 summary {
-    font-size: clamp(1.2em, 2em, 2.5vw);
+    font-size: clamp(1.2em, 1.5em, 1.8vw);
     font-weight: 700;
 }
+
 details {
-    cursor:pointer;
+    cursor: pointer;
     padding: 13px;
+    margin-bottom: 20px;
+    border-radius: 10px;
     text-align: center;
+    max-width: 900px;
+    background-color: var(--background-tertiary);
+
     &:hover {
-        background-color: rgb(100, 100, 100);
+        background-color: var(--background-tertiary);
         border-radius: 5px;
     }
-}
-details > summary {
-    //list-style-type: "";
 }

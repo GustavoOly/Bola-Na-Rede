@@ -4,18 +4,16 @@
     //height: f;
     //border-bottom: 1px solid rgba(255, 255, 255, 0.13);
 }
-@media (max-width: 768px) {
-    .inscricao__section{
-    height: 50rem;
-}
-}
+
+
 
 .inscricao__container {
     //background-color: black;
     max-width: 1280px;
-    height: 33rem;
+    //height: 33rem;
     margin: 0 auto;
     position: relative;
+    display: flex;
     animation: identifier 2s;
 
     @keyframes identifier {
@@ -28,6 +26,9 @@
             opacity: 1;
             transform: translateY(0);
         }
+    }
+    @media (max-width: 768px) {
+        flex-direction: column;
     }
 
     .inscricao__c-card {
@@ -52,7 +53,7 @@
             width: 100%;
             padding: 10px;
             border-radius: 50px;
-            height: 4rem;
+            
             position: relative;
             max-width: 500px;
         }
@@ -61,7 +62,7 @@
             .inscricao__c-email {
                 padding: 0;
                 background: none;
-                height: 100%;
+               
                 max-width: 100%;
             }
 
@@ -121,17 +122,17 @@
     }
 
     .inscricao__imagens-one {
-        position: absolute;
-        top: -10px;
-        right: 76%;
+        //position: absolute;
+        //top: -10px;
+        //right: 76%;
         display: block;
-        max-height: 100%;
+        //max-height: 100%;
         max-width: 100%;
         animation: imagens-one infinite 5s;
     }
 
     @keyframes imagens-one {
-        0% {
+        20% {
             transform: translateY(0%);
         }
 
@@ -139,7 +140,7 @@
             transform: translateY(5%);
         }
 
-        0% {
+        20% {
             transform: translateY(0%);
         }
 
