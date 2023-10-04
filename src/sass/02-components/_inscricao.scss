@@ -35,7 +35,7 @@
                 opacity: 0;
                 transform: translateY(20%);
             }
-    
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -159,26 +159,30 @@
         }
     }
 
-        @media (max-width:768px) {
-            .inscricao__imagens-one {
-                top: auto;
-                right: 0%;
-                left: 0%;
-                margin: 0 auto;
-            }
+    @media (max-width:768px) {
+        .inscricao__c-imagens {
+            overflow: hidden;
+        }
+
+        .inscricao__imagens-one {
+            top: auto;
+            right: 0%;
+            left: 0%;
+            margin: 0 auto;
         }
     }
+}
 
-    .faq__container {
-        animation: identifier 2s;
+.faq__container {
+    animation: identifier 2s;
 
-        @keyframes identifier {
-            from {
+    @keyframes identifier {
+        from {
             opacity: 0;
             transform: translateY(20%);
         }
-    
-            to {
+
+        to {
             opacity: 1;
             transform: translateY(0);
         }

@@ -12,7 +12,11 @@ function Inscricao() {
         const form = e.target;
         const formData = new FormData(form);
 
-        
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+        });
+
         setEmailEnviado(true);
         Confetes();
     };
@@ -20,7 +24,9 @@ function Inscricao() {
     const styleP = {
         color: 'black',
         textAlign: 'center',
-        padding: '10px',
+        padding: '15px 0px',
+        backgroundColor: 'white',
+        borderRadius: '50px',
     };
 
     return (
