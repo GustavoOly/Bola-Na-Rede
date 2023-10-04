@@ -1,16 +1,18 @@
 import jogador from '/src/assets/vetor-jogador-bola-na-rede01-min.png'
-
 import React, { useState } from 'react';
-import Confetes from './confetes'; // Certifique-se de que Confetes esteja corretamente importado
+import Confetes from './confetes'; 
 
 function Inscricao() {
     const [emailEnviado, setEmailEnviado] = useState(false);
+    const [enviando, setEnviando] = useState(false); 
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         const form = e.target;
         const formData = new FormData(form);
+
+        setEnviando(true); 
 
         const response = await fetch(form.action, {
             method: 'POST',
@@ -47,7 +49,9 @@ function Inscricao() {
                                 <input type="email" placeholder="Digite seu email" title="Digite seu email" name="email" id="inscricao__input-email" required />
                                 <input type="hidden" name="_next" value="https://bolanarede-ipa.netlify.app/" />
                                 <input type="hidden" name="_captcha" value="false" />
-                                <button type='submit' title="Enviar email">Notifique-me</button>
+                                <button type='submit' title="Enviar email" disabled={enviando}>
+                                    {enviando ? 'Enviando...' : 'Notifique-me'}
+                                </button>
                             </form>
                         )}
                     </div>
@@ -62,5 +66,3 @@ function Inscricao() {
 }
 
 export default Inscricao;
-
-
