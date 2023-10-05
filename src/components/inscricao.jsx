@@ -8,20 +8,21 @@ function Inscricao() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        const form = e.target;
-        const formData = new FormData(form);
-
-        setEnviando(true); 
-
-        const response = await fetch(form.action, {
-            method: 'POST',
-            body: formData,
-        });
-
-        setEmailEnviado(true);
-        Confetes();
-    };
+        
+            const form = e.target;
+            const formData = new FormData(form);
+        
+            setEnviando(true);
+        
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+            });
+        
+            if (response.ok) {
+                setEmailEnviado(true);
+            }
+        };
 
     const styleP = {
         color: 'black',
@@ -43,11 +44,14 @@ function Inscricao() {
 
                     <div className="inscricao__c-email">
                         {emailEnviado ? (
+                            <>
                             <p style={styleP}>Obrigado por enviar seu e-mail!</p>
+                            {Confetes()} 
+                            </>
                         ) : (
                             <form action="https://formsubmit.co/bolanarede.ipa@outlook.com.br" method="POST" onSubmit={handleSubmit} >
                                 <input type="email" placeholder="Digite seu email" title="Digite seu email" name="email" id="inscricao__input-email" required />
-                                <input type="hidden" name="_next" value="http://localhost:5173/" />
+                                <input type="hidden" name="_next" value="https://bolanarede-ipa.netlify.app/" />
                                 <input type="hidden" name="_captcha" value="false" />
                                 <button type='submit' title="Enviar email" disabled={enviando}>
                                     {enviando ? 'Enviando...' : 'Notifique-me'}
