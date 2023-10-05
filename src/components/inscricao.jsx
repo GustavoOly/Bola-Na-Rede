@@ -77,7 +77,7 @@ function Inscricao() {
                                     {enviando ? "Enviando..." : "Notifique-me"}
                                 </button>
                             </form>
-                        )};
+                        )}
                     </div>
                     <p>* Alguma dúvida? Verifique nossas <a href="#FAQs">perguntas frequentes</a></p>
                 </div>
