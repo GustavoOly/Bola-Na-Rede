@@ -1,7 +1,7 @@
 import Jogador from '/src/assets/vetor-jogador-bola-na-rede01-min.png';
 import Confetes from './confetes';
 import { useState } from 'react';
-import emailJs from '@emailjs/browser'
+import emailJs from '@emailjs/browser';
 
 function Inscricao() {
 
@@ -10,28 +10,31 @@ function Inscricao() {
 
     const handleEnviarClick = () => {
         setEnviando(true);
-
-    };
+        return;
+    }
 
     function sendEmail(e) {
         e.preventDefault();
 
         const templateParams = {
             email: email
-        }
+        };
 
 
         emailJs.send("service_t22j3m6", "template_e04tk9w", templateParams, "-7-o4ra5VzS7jAwlS")
             .then((response) => {
-                alert("Email enviado com sucesso!", response.status, response.text)
-                Confetes()
+                alert("Email enviado com sucesso!", response.status, response.text);
+                Confetes();
                 setTimeout(() => {
                     setEnviando(false);
-                }, 100);
+                },);
 
             }, (err) => {
-                alert("Erro ao enviar o email, tente novamente", err)
-            })
+                alert("Erro ao enviar o email, tente novamente.", err)
+                setTimeout(() => {
+                    setEnviando(false);
+                },);
+            },);
     }
 
     return (
@@ -58,7 +61,7 @@ function Inscricao() {
                             <button
                                 type='submit'
                                 value="Enviar"
-                                onClick={handleEnviarClick}
+                                onClick={email === '' ? "Digite seu email" : handleEnviarClick}
                                 disabled={enviando}
                                 title="Enviar email" >
                                 {enviando ? "Enviando..." : "Notifique-me"}
