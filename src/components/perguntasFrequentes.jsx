@@ -53,7 +53,7 @@ function PerguntasFrequentes() {
     return (
         <section style={faqSectionStyles}>
             <div style={faqContainerStyles} className="faq__container">
-                <h1>FAQs</h1>
+                <h1 id="FAQs">FAQs</h1>
                 <article>
                     {source.map((item, index) => (
                         <details key={item.summary} open={index === 0}>

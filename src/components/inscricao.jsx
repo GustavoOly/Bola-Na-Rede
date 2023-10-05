@@ -1,26 +1,37 @@
-import jogador from '/src/assets/vetor-jogador-bola-na-rede01-min.png';
+import Jogador from '/src/assets/vetor-jogador-bola-na-rede01-min.png';
 import Confetes from './confetes';
 import { useState } from 'react';
 import emailJs from '@emailjs/browser'
 
 function Inscricao() {
 
-    const [email, setEmail] = useState('')
+    const [email, setEmail] = useState('');
+    const [enviando, setEnviando] = useState(false);
 
-    function sendEmail(e){
+    const handleEnviarClick = () => {
+        setEnviando(true);
+
+    };
+
+    function sendEmail(e) {
         e.preventDefault();
 
         const templateParams = {
             email: email
         }
 
+
         emailJs.send("service_t22j3m6", "template_e04tk9w", templateParams, "-7-o4ra5VzS7jAwlS")
-        .then((response) => {
-            alert("Email enviado", response.status, response.text)
-            Confetes()
-        }, (err) => {
-            alert("error", err)
-        })
+            .then((response) => {
+                alert("Email enviado com sucesso!", response.status, response.text)
+                Confetes()
+                setTimeout(() => {
+                    setEnviando(false);
+                }, 100);
+
+            }, (err) => {
+                alert("Erro ao enviar o email, tente novamente", err)
+            })
     }
 
     return (
@@ -47,15 +58,19 @@ function Inscricao() {
                             <button
                                 type='submit'
                                 value="Enviar"
-                                title="Enviar email" >Notifique-me</button>
-                                
+                                onClick={handleEnviarClick}
+                                disabled={enviando}
+                                title="Enviar email" >
+                                {enviando ? "Enviando..." : "Notifique-me"}
+                            </button>
+
                         </form>
 
                     </div>
-                    <p>* Alguma dúvida? Verifique nossas <a>perguntas frequentes</a></p>
+                    <p>* Alguma dúvida? Verifique nossas <a href="#FAQs">perguntas frequentes</a></p>
                 </div>
                 <div className="inscricao__c-imagens">
-                    <img className="inscricao__imagens-one" src={jogador} alt="" />
+                    <img className="inscricao__imagens-one" src={Jogador} alt="" />
                 </div>
             </div>
         </section>
