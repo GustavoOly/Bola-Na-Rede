@@ -1,7 +1,7 @@
 const source = [
     {
         summary: "Qual é a localização onde o campeonato de futebol ocorrerá?",
-        details: "Na Fazenda Aliança que está localizada em Ipameri, Goiás. Para obter direções detalhadas, consulte nosso site oficial."
+        details: "Na Fazenda Aliança que está localizada em Ipameri, Goiás. Para obter direções detalhadas, consulte nosso site oficial em breve."
     },
     {
         summary: "Quais são os custos de inscrição para as equipes participantes do campeonato?",

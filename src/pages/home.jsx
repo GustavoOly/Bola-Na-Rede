@@ -1,6 +1,5 @@
 import Header from '../components/header.jsx'
 import Inscricao from '../components/inscricao.jsx'
-
 import PerguntasFrequentes from '../components/perguntasFrequentes.jsx'
 
 
@@ -9,10 +8,7 @@ function Home() {
     <>
       <Header />
       <Inscricao />
-      {/*<BtnWhatsapp />
-      <BtnInstagram />*/}
       <PerguntasFrequentes />
-      {/*<Footer />*/}
     </>
   );
 }

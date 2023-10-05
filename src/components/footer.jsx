@@ -1,12 +1,11 @@
 function Footer() {
 
-	return (
+     return (
 
-     <section>
-     <div>Footer is a lie</div>
-     <div></div>
-     </section>
-	)
+          <section>
+               <div>Footer is a lie</div>
+          </section>
+     )
 }
 
 export default Footer

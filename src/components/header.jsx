@@ -14,15 +14,6 @@ function Header() {
             <div className="header__c-logo">
                <img title="Logo Bola Na Rede" className="header__logo-img" src={bolaNaRedeLogo} />
             </div>
-            {/*<nav className="header__nav">
-
-               <label htmlFor="">
-                  <input type="checkbox" name="" id="" />
-
-               </label>
-               <li><a>Incio</a></li>
-               <li><a>Mais Informações</a></li>
-            </nav>*/}
          </div>
       </section>
    )
