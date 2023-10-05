@@ -60,8 +60,7 @@ function Inscricao() {
                             <button
                                 type='submit'
                                 value="Enviar"
-                                onClick={email === '' ? "Digite seu email" : handleEnviarClick}
-                                disabled={enviando}
+                                onClick={email === '' ? () => alert("Digite seu email") : handleEnviarClick}
                                 title="Enviar email" >
                                 {enviando ? "Enviando..." : "Notifique-me"}
                             </button>
