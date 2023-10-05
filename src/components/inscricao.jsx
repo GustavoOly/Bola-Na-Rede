@@ -7,6 +7,7 @@ function Inscricao() {
 
     const [email, setEmail] = useState('');
     const [enviando, setEnviando] = useState(false);
+    const [emailEnviado, setEmailEnviado] = useState(false);
 
     const handleEnviarClick = () => {
         setEnviando(true);
@@ -26,6 +27,7 @@ function Inscricao() {
                 Confetes();
                 setTimeout(() => {
                     setEnviando(false);
+                    setEmailEnviado(true);
                 },);
 
             }, (err) => {
@@ -34,6 +36,14 @@ function Inscricao() {
                     setEnviando(false);
                 },);
             },);
+    }
+
+    const thanksStyle = {
+        padding: '15px',
+        backgroundColor: 'white',
+        color: 'black',
+        borderRadius: '50px',
+        textAlign: 'center'
     }
 
     return (
@@ -47,26 +57,27 @@ function Inscricao() {
                     </span>
 
                     <div className="inscricao__c-email">
-
-                        <form onSubmit={sendEmail} >
-                            <input
-                                type="email"
-                                placeholder="Digite seu email"
-                                title="Digite seu email"
-                                name="email" id="inscricao__input-email" required
-                                onChange={(e) => setEmail(e.target.value)}
-                                value={email}
-                            />
-                            <button
-                                type='submit'
-                                value="Enviar"
-                                onClick={email === '' ? () => alert("Digite seu email") : handleEnviarClick}
-                                title="Enviar email" >
-                                {enviando ? "Enviando..." : "Notifique-me"}
-                            </button>
-
-                        </form>
-
+                        {emailEnviado ? (
+                            <p style={thanksStyle}>Obrigado por enviar seu email</p>
+                        ) : (
+                            <form onSubmit={sendEmail} >
+                                <input
+                                    type="email"
+                                    placeholder="Digite seu email"
+                                    title="Digite seu email"
+                                    name="email" id="inscricao__input-email" required
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    value={email}
+                                />
+                                <button
+                                    type='submit'
+                                    value="Enviar"
+                                    onClick={email === '' ? () => alert("Digite seu email") : handleEnviarClick}
+                                    title="Enviar email" >
+                                    {enviando ? "Enviando..." : "Notifique-me"}
+                                </button>
+                            </form>
+                        )};
                     </div>
                     <p>* Alguma dúvida? Verifique nossas <a href="#FAQs">perguntas frequentes</a></p>
                 </div>
