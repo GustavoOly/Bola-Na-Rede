@@ -8,16 +8,17 @@
 
 
 .inscricao__container {
-    //background-color: black;
     max-width: 1280px;
-    //height: 33rem;
     margin: 0 auto;
     position: relative;
     display: flex;
+    height: 34rem;
+    align-items: center;
 
 
     @media (max-width: 768px) {
         flex-direction: column;
+        height: auto;
     }
 
     .inscricao__c-card {
@@ -95,7 +96,7 @@
         input {
             border: none;
             outline: none;
-            width: 77%;
+            width: 74%;
             height: 44px;
             border-radius: 20px;
             transform: translate(0%, 0%);
@@ -114,7 +115,7 @@
             transform: translate(9%, -6%);
             height: 50px;
             color: white;
-            width: 20%;
+            width: 23%;
 
             &:hover {
                 background-color: #ee0e37;
@@ -163,6 +164,7 @@
     @media (max-width:768px) {
         .inscricao__c-imagens {
             overflow: hidden;
+            width: 100%;
         }
 
         .inscricao__imagens-one {

@@ -23,7 +23,7 @@ function Inscricao() {
 
         emailJs.send("service_t22j3m6", "template_e04tk9w", templateParams, "-7-o4ra5VzS7jAwlS")
             .then((response) => {
-                alert("Email enviado com sucesso!", response.status, response.text);
+                console.log("Email enviado com sucesso!", response.status, response.text);
                 Confetes();
                 setTimeout(() => {
                     setEnviando(false);
