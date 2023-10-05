@@ -1,8 +1,27 @@
 import jogador from '/src/assets/vetor-jogador-bola-na-rede01-min.png';
-//import Confetes from './confetes';
-import React, { useState } from 'react';
+import Confetes from './confetes';
+import { useState } from 'react';
+import emailJs from '@emailjs/browser'
 
 function Inscricao() {
+
+    const [email, setEmail] = useState('')
+
+    function sendEmail(e){
+        e.preventDefault();
+
+        const templateParams = {
+            email: email
+        }
+
+        emailJs.send("service_t22j3m6", "template_e04tk9w", templateParams, "-7-o4ra5VzS7jAwlS")
+        .then((response) => {
+            alert("Email enviado", response.status, response.text)
+            Confetes()
+        }, (err) => {
+            alert("error", err)
+        })
+    }
 
     return (
         <section className="inscricao__section">
@@ -15,13 +34,22 @@ function Inscricao() {
                     </span>
 
                     <div className="inscricao__c-email">
-                        
-                            <form action="https://formsubmit.co/bolanarede.ipa@outlook.com.br" method="POST" >
-                                <input type="email" placeholder="Digite seu email" title="Digite seu email" name="email" id="inscricao__input-email" required />
-                                <input type="hidden" name="_next" value="https://bolanarede-ipa.netlify.app/" />
-                                <input type="hidden" name="_captcha" value="false" />
-                                <button  type='submit' title="Enviar email" >Notifique-me</button>
-                            </form>
+
+                        <form onSubmit={sendEmail} >
+                            <input
+                                type="email"
+                                placeholder="Digite seu email"
+                                title="Digite seu email"
+                                name="email" id="inscricao__input-email" required
+                                onChange={(e) => setEmail(e.target.value)}
+                                value={email}
+                            />
+                            <button
+                                type='submit'
+                                value="Enviar"
+                                title="Enviar email" >Notifique-me</button>
+                                
+                        </form>
 
                     </div>
                     <p>* Alguma dúvida? Verifique nossas <a>perguntas frequentes</a></p>

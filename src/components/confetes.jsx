@@ -216,7 +216,7 @@ function Confetes() {
     const start = () => {
         setTimeout(function(){
             confetti.start();
-        }, 500);
+        }, 100);
     };
 
      const stop = () => {
