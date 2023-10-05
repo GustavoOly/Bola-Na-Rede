@@ -10,7 +10,6 @@ function Inscricao() {
 
     const handleEnviarClick = () => {
         setEnviando(true);
-        return;
     }
 
     function sendEmail(e) {
