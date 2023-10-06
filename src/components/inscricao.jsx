@@ -10,7 +10,7 @@ function Inscricao() {
     const [emailEnviado, setEmailEnviado] = useState(false);
 
     const handleEnviarClick = () => {
-        setEnviando(true);
+        setEnviando(true);      
     }
 
     function sendEmail(e) {
