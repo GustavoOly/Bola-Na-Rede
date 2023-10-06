@@ -41,8 +41,9 @@ section {
 }
 
 h1 {
-    font-size: clamp(2.3em, 4em, 5vw);
+    font-size: clamp(2.3em, 4em, 4.8vw);
     line-height: 1.1;
+    color: var(--text-color-primary);
 }
 
 h4::before {
@@ -50,13 +51,6 @@ h4::before {
     margin-right: 10px;
 }
 
-img {
-    user-select: none;
-    -moz-user-select: none !important;
-    /* Para navegadores Firefox */
-    -webkit-user-select: none;
-    -ms-user-select: none;
-}
 
 summary {
     font-size: clamp(1.2em, 1.5em, 1.8vw);

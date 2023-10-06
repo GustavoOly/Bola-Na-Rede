@@ -1,18 +1,15 @@
 .inscricao__section {
     background-color: var(--background-primary);
     width: 100%;
-    //height: f;
     //border-bottom: 1px solid rgba(255, 255, 255, 0.13);
 }
-
-
 
 .inscricao__container {
     max-width: 1280px;
     margin: 0 auto;
     position: relative;
     display: flex;
-    height: 34rem;
+    height: 90vh;
     align-items: center;
 
 
@@ -74,19 +71,7 @@
                 gap: 10px;
             }
 
-            input {
-                height: 52px !important;
-                width: 100% !important;
-                border-radius: 50px !important;
-            }
-
-            button {
-                position: unset !important;
-                transform: none !important;
-                width: 100% !important;
-            }
         }
-
 
 
         form {
@@ -103,6 +88,11 @@
             text-indent: 15px;
             background-color: white;
             color: black;
+            @media (max-width: 768px) {
+                height: 52px;
+                width: 100%;
+                border-radius: 50px;
+            }
         }
 
         button {
@@ -119,6 +109,11 @@
 
             &:hover {
                 background-color: #ee0e37;
+            }
+            @media (max-width: 768px) {
+                position: unset;
+                transform: none;
+                width: 100%;
             }
         }
 
@@ -141,10 +136,6 @@
 
         50% {
             transform: translateX(5%);
-        }
-
-        0% {
-            transform: translateX(0%);
         }
 
     }
