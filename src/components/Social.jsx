@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import btnWhatsapp from '/src/assets/whatsapp.svg';
 import btnInstagram from '/src/assets/instagram.svg';
-import Add from '/src/assets/add.svg';
+import Menu from '/src/assets/menu.svg';
 import Close from '/src/assets/close.svg';
 
 function Social() {
@@ -20,10 +20,10 @@ function Social() {
                     <div className='view' onClick={handleViewClick}></div>
                 ) : null}
                 <label htmlFor="check">
-                    <div className='social__buttom'>
+                    <div title='menu' className='social__buttom'>
                         <img
-                            className='social__button-icon'
-                            src={isChecked ? Close : Add}
+                            className='social__buttom-icon'
+                            src={isChecked ? Close : Menu}
                             alt="" 
                         />
                         <input
