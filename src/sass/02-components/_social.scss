@@ -34,14 +34,13 @@
 
     .social__itens {
         position: fixed;
-        right: -30px;
-        bottom: -60px;
-        z-index: 1;
-        background-color: var(--background-tertiary);
-        border-radius: 180px;
-        transform:rotate(40deg);
         width: 220px;
         height: 220px;
+        right: -30px;
+        bottom: -60px;
+        background-color: var(--background-tertiary);
+        border-radius: 180px;
+        transform: rotate(40deg);
         z-index: 200;
         flex-direction: column;
         align-items: flex-start;
@@ -49,12 +48,14 @@
         justify-content: center;
         gap: 20px;
         display: flex;
+        border: 1px solid #2f2f2f;
 
         .social__btn-instagram {
             cursor: pointer;
             z-index: 200;
             transform: rotate(-40deg);
             border-radius: 50%;
+
             &:hover {
                 background-color: var(--background-secundary);
             }
@@ -67,10 +68,10 @@
             z-index: 2;
             cursor: pointer;
             transform: rotate(-30deg);
+
             &:hover {
                 background-color: var(--background-secundary);
             }
         }
     }
 }
-
